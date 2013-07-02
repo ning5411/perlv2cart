@@ -1,13 +1,13 @@
-Name: nsunperl
-Cartridge-Short-Name: NSUNPERL
-Display-Name: NsunPerl 5.10
+Name: perl
+Cartridge-Short-Name: PERL
+Display-Name: Perl 5.10
 Description: "Perl is a general-purpose server-side scripting language originally designed for Web development to produce dynamic Web pages. Popular development frameworks include: CakePerl, Zend, Symfony, and Code Igniter."
 Version: '5.10'
 License: "GPL v2"
 License-Url: http://dev.perl.org/licenses/
 Vendor: perl.org
 Cartridge-Version: 0.0.1
-Cartridge-Vendor: nsuntest
+Cartridge-Vendor: redhat
 Categories:
   - service
   - perl
@@ -22,10 +22,10 @@ Cart-Data:
   - Key: OPENSHIFT_REPO_DIR
     Type: environment
     Description: "Application root directory where application files reside. This directory is reset every time you do a git-push"
-  - Key: OPENSHIFT_INTERNAL_PORT
+  - Key: OPENSHIFT_PERL_PORT
     Type: environment
     Description: "Internal port to which the web-framework binds to."
-  - Key: OPENSHIFT_INTERNAL_IP
+  - Key: OPENSHIFT_PERL_IP
     Type: environment
     Description: "Internal IP to which the web-framework binds to."
   - Key: OPENSHIFT_APP_DNS
@@ -75,12 +75,12 @@ Group-Overrides:
   - components:
     - perl-5.10
     - web_proxy
-    - wsuntest-perl-5.10
+    - nsuntest-perl-5.10
 Endpoints:
   - Private-IP-Name:   IP
     Private-Port-Name: PORT
     Private-Port:      8080
-    Public-Port-Name:  SSL_PROXY_PORT
+    Public-Port-Name:  PROXY_PORT
     Mappings:
       - Frontend:      ""
         Backend:       ""
@@ -88,12 +88,12 @@ Endpoints:
       - Frontend:      "/health"
         Backend:       ""
         Options:       { health: true }
-Install-Build-Required: false
-#Source-Url: https://github.com/wsun1/perlv2cart/raw/master/perlv2cart.tar.gz
-Source-Url: https://github.com/ning5411/perlv2cart.git
-#Source-Url: git://github.com/wsun1/perlv2cart.git
-##Source-Url: https://github.com/wsun1/perlv2cart/raw/master/perlv2cart.zip
-##Source-Url: file:///root/perlv2cart/
-##Source-Url: http://baidu.com
+
+#Source-Url: https://github.com/ning5411/perlv2cart/raw/master/perlv2cart.tar.gz
+#Source-Url: https://github.com/ning5411/perlv2cart.git
+#Source-Url: git://github.com/ning5411/perlv2cart.git
+Source-Url: https://github.com/ning5411/perlv2cart/raw/master/perlv2cart.zip
 #Source-Url: file:///root/perlv2cart/
-##Source-Md5: 1b2ac86a3ed20b9fabbc2d2d5385781c
+#Source-Url: http://baidu.com
+#Source-Url: file:///root/perlv2cart/
+#Source-Md5: 1b2ac86a3ed20b9fabbc2d2d5385781c
