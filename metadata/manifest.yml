@@ -89,10 +89,10 @@ Endpoints:
         Backend:       ""
         Options:       { health: true }
 
-#Source-Url: https://github.com/ning5411/perlv2cart/raw/master/perlv2cart.tar.gz
+Source-Url: https://github.com/ning5411/perlv2cart/raw/master/perlv2cart.tar.gz
 #Source-Url: https://github.com/ning5411/perlv2cart.git
 #Source-Url: git://github.com/ning5411/perlv2cart.git
-Source-Url: https://github.com/ning5411/perlv2cart/raw/master/perlv2cart.zip
+#Source-Url: https://github.com/ning5411/perlv2cart/raw/master/perlv2cart.zip
 #Source-Url: file:///root/perlv2cart/
 #Source-Url: http://baidu.com
 #Source-Url: file:///root/perlv2cart/
